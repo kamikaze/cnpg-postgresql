@@ -52,7 +52,7 @@ RUN set -xe; \
 		python3-psycopg2 \
 		python3-setuptools \
 	; \
-    locale-gen lv_LV.UTF-8 && update-locale ; \
+    echo "lv_LV.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen && update-locale ; \
 	pip3 install --break-system-packages --upgrade pip; \
 	# TODO: Remove --no-deps once https://github.com/pypa/pip/issues/9644 is solved
 	pip3 install --break-system-packages --no-deps -r requirements.txt; \
