@@ -51,6 +51,7 @@ RUN set -xe; \
 		python3-pip \
 		python3-psycopg2 \
 		python3-setuptools \
+        locales-all \
 	; \
     echo "lv_LV.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen && update-locale ; \
 	pip3 install --break-system-packages --upgrade pip; \
